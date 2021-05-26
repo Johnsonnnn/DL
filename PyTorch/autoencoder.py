@@ -11,10 +11,10 @@ import numpy as np
 EPOCH = 10
 BATCH_SIZE = 64
 LR = 0.005
-DOWNLOAD_MNIST = True
+DOWNLOAD_MNIST = False
 N_TEST_IMG = 5
 
-train_data = torchvision.datasets.MNIST(
+train_data = torchvision.datasets.FashionMNIST(
 	root='./mnist/',
 	train=True,
 	transform=torchvision.transforms.ToTensor(),
@@ -57,8 +57,6 @@ class AutoEncoder(nn.Module):
 	def forward(self, x):
 		encoded = self.encoder(x)
 		decoded = self.decoder(encoded)
-		print('encoder.shape:', encoded.shape)
-		print('encoder.shape:', decoded.shape)
 		return encoded, decoded
 
 autoencoder = AutoEncoder()
@@ -110,17 +108,10 @@ plt.show()
 view_data = train_data.train_data[:200].view(-1, 28 * 28).type(torch.FloatTensor) / 255.
 encoded_data, _ = autoencoder(view_data)
 
-
-print('encoded_data.shape:', encoded_data.shape)
-print('encoded_data.data.shape:', encoded_data.data.shape)
-
 fig = plt.figure(2)
 ax = Axes3D(fig)
 X, Y, Z = encoded_data.data[:, 0].numpy(), encoded_data.data[:, 1].numpy(), encoded_data.data[:, 2].numpy()
 
-print(X.shape)
-print(Y.shape)
-print(Z.shape)
 values = train_data.train_labels[:200].numpy()
 for x, y, z, s in zip(X, Y, Z, values):
 	c = cm.rainbow(int(255 * s / 9))
