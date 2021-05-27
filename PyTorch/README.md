@@ -1,2 +1,2 @@
 ## Denoisy AutoEncoder CNN:
-![]('./Images/denoisy_autoencoder_cnn.jpg')
+![](./Images/denoisy_autoencoder_cnn.jpg)
