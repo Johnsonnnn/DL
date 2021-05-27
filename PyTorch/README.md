@@ -1,4 +1,9 @@
 ## AutoEncoder:
++ ### File: [autoencoder_cnn.py](./autoencoder_cnn.py)<p>
+![](./Images/autoencoder_cnn.jpg)
+  
+  
+## AutoEncoder:
 + ### File: [autoencoder.py](./autoencoder.py)<p>
 + ### From: [MorvanZhou](https://github.com/MorvanZhou/Tensorflow-Tutorial)<p>
 ![](./Images/autoencoder.jpg)
