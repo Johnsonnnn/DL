@@ -1,3 +1,3 @@
 ## Denoisy AutoEncoder CNN:
-File: [denoisy_autoencoder_cnn.py](./denoisy_autoencoder_cnn.py)
+File: [denoisy_autoencoder_cnn.py](./denoisy_autoencoder_cnn.py)  
 ![](./Images/denoisy_autoencoder_cnn.jpg)
